@@ -19,7 +19,7 @@ namespace DILearn
                 new() {Longitude = 0, Latitude = 30},
                 new() {Longitude = 117, Latitude = 62}
             };
-            var random = RandomNumberGenerator.GetInt32(0, 7);
+            var random = RandomNumberGenerator.GetInt32(0, coordinatesPool.Count + 1);
             return Task.FromResult(coordinatesPool[random]);
         }
     }
