@@ -1,5 +1,3 @@
-
-
 namespace DILearn
 {
     public class Coordinates
@@ -9,7 +7,21 @@ namespace DILearn
 
         public static float RawDistanceTo(Coordinates otherCoords)
         {
-            return 3;
+            if (otherCoords.Latitude >= 0 && otherCoords.Longitude >= 0)
+            {
+                if (otherCoords.Latitude < 30 && otherCoords.Longitude < 60)
+                {
+                    return 3;
+                }
+            }
+
+            if (otherCoords.Latitude >= 30 && otherCoords.Latitude < 60 && otherCoords.Longitude >= 60 &&
+                otherCoords.Longitude > 120)
+            {
+                return 10;
+            }
+
+            return 15;
         }
     }
 }
