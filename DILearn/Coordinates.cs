@@ -15,10 +15,12 @@ namespace DILearn
                 }
             }
 
-            if (otherCoords.Latitude >= 30 && otherCoords.Latitude < 60 && otherCoords.Longitude >= 60 &&
-                otherCoords.Longitude > 120)
+            if (otherCoords.Latitude >= 30 && otherCoords.Longitude >= 60)
             {
-                return 10;
+                if (otherCoords.Latitude < 60 && otherCoords.Longitude > 120)
+                {
+                    return 10;
+                }
             }
 
             return 15;
